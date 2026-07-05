@@ -9,6 +9,7 @@ import java.util.List;
 
 @Service
 public class CourseService {
+
     private final CourseRepository courseRepository;
 
     @Autowired
@@ -16,7 +17,23 @@ public class CourseService {
         this.courseRepository = courseRepository;
     }
 
-    public List<Course> findAll() {
+    public List<Course> getAllCourses() {
         return courseRepository.findAll();
+    }
+
+    public Course getCourseById(Long id) {
+        return courseRepository.findById(id);
+    }
+
+    public Course createCourse(Course course) {
+        return courseRepository.create(course);
+    }
+
+    public Course updateCourse(Long id, Course course) {
+        return courseRepository.update(id, course);
+    }
+
+    public Course deleteCourseById(Long id) {
+        return courseRepository.deleteById(id);
     }
 }

@@ -14,4 +14,8 @@ public class Enrollment {
     public Long getId() { return id; }
     public String getStudentName() { return studentName; }
     public Long getCourseId() { return courseId; }
+
+    public void setId(Long id) { this.id = id; }
+    public void setStudentName(String studentName) { this.studentName = studentName; }
+    public void setCourseId(Long courseId) { this.courseId = courseId; }
 }
